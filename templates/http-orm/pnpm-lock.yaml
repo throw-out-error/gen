@@ -16,7 +16,7 @@ dependencies:
   typeorm: 0.2.28
   typeorm-typedi-extensions: 0.2.3_typedi@0.8.0+typeorm@0.2.28
 devDependencies:
-  '@toes/gen': 'link:../..'
+  '@toes/gen': github.com/throw-out-error/gen/5b60a78502ab3d5b65645a2dfd69519ffcb775dc
   '@types/bunyan': 1.8.6
   '@types/config': 0.0.36
   '@types/express': 4.17.8
@@ -1861,6 +1861,24 @@ packages:
       enquirer: '>= 2.3.0 < 3'
     resolution:
       integrity: sha512-5HjYFP0FpG2dOuSAth2vQ172rWqI78746itLIvgg0KjHMAyW8CVNc9wzBzEo4/5UYfNbmT28u0J29NoA3W0z+Q==
+  /listr2/3.1.1_enquirer@2.3.6:
+    dependencies:
+      chalk: 4.1.0
+      cli-truncate: 2.1.0
+      enquirer: 2.3.6
+      figures: 3.2.0
+      indent-string: 4.0.0
+      log-update: 4.0.0
+      p-map: 4.0.0
+      rxjs: 6.6.3
+      through: 2.3.8
+    dev: true
+    engines:
+      node: '>=10.0.0'
+    peerDependencies:
+      enquirer: '>= 2.3.0 < 3'
+    resolution:
+      integrity: sha512-5HjYFP0FpG2dOuSAth2vQ172rWqI78746itLIvgg0KjHMAyW8CVNc9wzBzEo4/5UYfNbmT28u0J29NoA3W0z+Q==
   /load-json-file/1.1.0:
     dependencies:
       graceful-fs: 4.2.4
@@ -3477,9 +3495,20 @@ packages:
       registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/throw-out-error/core/tar.gz/02bbdb0f3468a1d5c01b6b04954d8846e13d374a'
     version: 1.0.0
+  github.com/throw-out-error/gen/5b60a78502ab3d5b65645a2dfd69519ffcb775dc:
+    dependencies:
+      chalk: 4.1.0
+      enquirer: 2.3.6
+      listr2: 3.1.1_enquirer@2.3.6
+    dev: true
+    hasBin: true
+    name: '@toes/gen'
+    resolution:
+      tarball: 'https://codeload.github.com/throw-out-error/gen/tar.gz/5b60a78502ab3d5b65645a2dfd69519ffcb775dc'
+    version: 1.0.0
 specifiers:
   '@toes/core': 'github:throw-out-error/core'
-  '@toes/gen': 'link:C:/Users/thebo/Documents/Code/ts-http-template'
+  '@toes/gen': 'github:throw-out-error/gen'
   '@types/bunyan': ^1.8.6
   '@types/config': ^0.0.36
   '@types/express': ^4.17.8
