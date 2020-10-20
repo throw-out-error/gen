@@ -1,5 +1,6 @@
 dependencies:
   chalk: 4.1.0
+  commander: 6.1.0
   enquirer: 2.3.6
   listr2: 3.1.1_enquirer@2.3.6
 devDependencies:
@@ -375,6 +376,12 @@ packages:
   /color-name/1.1.4:
     resolution:
       integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
+  /commander/6.1.0:
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-wl7PNrYWd2y5mp1OK/LhTlv8Ff4kQJQRXXAvF+uU/TPNiVJUxZLRYGj/B0y/lPGAVcSbJqH2Za/cvHmrPMC8mA==
   /concat-map/0.0.1:
     dev: true
     resolution:
@@ -1308,6 +1315,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^4.5.0
   '@typescript-eslint/parser': ^4.5.0
   chalk: ^4.1.0
+  commander: ^6.1.0
   enquirer: ^2.3.6
   eslint: ^7.11.0
   eslint-config-prettier: ^6.13.0

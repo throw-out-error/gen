@@ -6,6 +6,6 @@
     ],
     "parser": "@typescript-eslint/parser",
     "rules": {
-        "no-mixed-requires": "warn"
+        "@typescript-eslint/no-var-requires": "warn"
     }
 }

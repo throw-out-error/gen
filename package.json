@@ -4,7 +4,7 @@
     "description": "",
     "main": "dist/index.js",
     "bin": {
-        "toe-gen": "dist/index.js"
+        "toe-gen": "dist/cli.js"
     },
     "scripts": {
         "build": "tsc --build"
@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "chalk": "^4.1.0",
+        "commander": "^6.1.0",
         "enquirer": "^2.3.6",
         "listr2": "^3.1.1"
     }

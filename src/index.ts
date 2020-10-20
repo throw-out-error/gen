@@ -6,17 +6,9 @@ import * as chalk from "chalk";
 import { prompt } from "enquirer";
 import * as cp from "child_process";
 import { Listr } from "listr2";
-
-export interface Context {
-    status?: boolean;
-}
-
-export interface ProjectOptions {
-    projectName: string;
-    templateName: string;
-    templatePath: string;
-    targetPath: string;
-}
+import { Command } from "commander";
+import { Ctx, ProjectOptions } from "./ctx";
+import { Template } from "./template";
 
 const CURR_DIR = process.cwd();
 
@@ -72,24 +64,15 @@ function createDirContents(
     });
 }
 
-async function main() {
-    const choices = ["Create A Project", "Run a Script"];
-    const ogChoices = [...choices];
-    const response = await prompt({
-        type: "autocomplete",
-        name: "run",
-        message: "What would you like to do today?",
-        choices,
-    });
-
-    interface Ctx extends Context {
-        currentProject?: ProjectOptions;
-    }
+export async function main(): Promise<void> {
+    const program = new Command();
+    program.version("1.0.0");
 
     const ctx: Ctx = {};
-
-    switch (response["run"]) {
-        case ogChoices[0]:
+    program
+        .command("create")
+        .description("create a project")
+        .action(async () => {
             tasks = new Listr(
                 [
                     {
@@ -205,12 +188,41 @@ async function main() {
                 ],
                 { exitOnError: true }
             );
-            break;
-    }
-    if (tasks) await tasks.run(ctx);
+
+            if (tasks) await tasks.run(ctx);
+        });
+    program
+        .command("run <script> [args]")
+        .description("run a script from your project")
+        .action(async (script, args) => {
+            const template: Template | undefined = (
+                await import(
+                    path.join(CURR_DIR, "src", ".template", "index.ts")
+                )
+            ).default;
+            if (!template)
+                throw new Error(
+                    "This project does not have a .template folder"
+                );
+            const tasks = template.scripts[script];
+            if (!tasks) throw new Error(`Invalid script ${script}`);
+            const templatePath: string = path.join(
+                __dirname,
+                "..",
+                "templates",
+                template.type
+            );
+            ctx.currentProject = {
+                projectName: path.basename(CURR_DIR),
+                targetPath: CURR_DIR,
+                templateName: template.type,
+                templatePath,
+            };
+            if (tasks) await tasks.run(ctx);
+        });
+    program.parse(process.argv);
 }
 
-main().catch((err) => {
-    if (err && err.message.trim() !== "") console.error(chalk.red(`${err}`));
-    process.exit(1);
-});
+export * from "./template";
+export * from "./ctx";
+export * from "./scripts";
