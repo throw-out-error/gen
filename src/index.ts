@@ -24,7 +24,11 @@ let tasks: Listr;
 
 const SKIP_FILES = ["node_modules"];
 
-function createDirContents(templatePath: string, projectName: string) {
+function createDirContents(
+    templatePath: string,
+    projectName: string,
+    ogProjectName: string
+) {
     // read all files/folders (1 level) from template folder
     const filesToCreate = fs.readdirSync(templatePath);
     // loop each file/folder
@@ -41,6 +45,15 @@ function createDirContents(templatePath: string, projectName: string) {
             // read file content and transform it using template engine
             let contents = fs.readFileSync(origFilePath, "utf8");
             // Do processing on the files
+
+            // console.log(origFilePath);
+
+            if (origFilePath.endsWith(path.join(".template", "index.ts")))
+                contents = contents.replace(
+                    `name: "untitled-project"`,
+                    `name: "${ogProjectName}"`
+                );
+
             // contents = template.render(contents, { projectName });
 
             // write file to destination folder
@@ -52,7 +65,8 @@ function createDirContents(templatePath: string, projectName: string) {
             // copy files/folder inside current folder recursively
             createDirContents(
                 path.join(templatePath, file),
-                path.join(projectName, file)
+                path.join(projectName, file),
+                ogProjectName
             );
         }
     });
@@ -144,7 +158,11 @@ async function main() {
                                 templatePath,
                                 projectName,
                             } = ctx.currentProject;
-                            await createDirContents(templatePath, projectName);
+                            createDirContents(
+                                templatePath,
+                                projectName,
+                                projectName
+                            );
                         },
                     },
                     {

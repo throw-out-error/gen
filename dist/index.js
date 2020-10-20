@@ -10,7 +10,7 @@ const listr2_1 = require("listr2");
 const CURR_DIR = process.cwd();
 let tasks;
 const SKIP_FILES = ["node_modules"];
-function createDirContents(templatePath, projectName) {
+function createDirContents(templatePath, projectName, ogProjectName) {
     // read all files/folders (1 level) from template folder
     const filesToCreate = fs.readdirSync(templatePath);
     // loop each file/folder
@@ -25,6 +25,9 @@ function createDirContents(templatePath, projectName) {
             // read file content and transform it using template engine
             let contents = fs.readFileSync(origFilePath, "utf8");
             // Do processing on the files
+            // console.log(origFilePath);
+            if (origFilePath.endsWith(path.join(".template", "index.ts")))
+                contents = contents.replace(`name: "untitled-project"`, `name: "${ogProjectName}"`);
             // contents = template.render(contents, { projectName });
             // write file to destination folder
             const writePath = path.join(CURR_DIR, projectName, file);
@@ -34,7 +37,7 @@ function createDirContents(templatePath, projectName) {
             // create folder in destination folder
             fs.mkdirSync(path.join(CURR_DIR, projectName, file));
             // copy files/folder inside current folder recursively
-            createDirContents(path.join(templatePath, file), path.join(projectName, file));
+            createDirContents(path.join(templatePath, file), path.join(projectName, file), ogProjectName);
         }
     });
 }
@@ -98,7 +101,7 @@ async function main() {
                     title: "Create Project Files",
                     task: async function createProjectFiles(ctx, task) {
                         const { templatePath, projectName, } = ctx.currentProject;
-                        await createDirContents(templatePath, projectName);
+                        createDirContents(templatePath, projectName, projectName);
                     },
                 },
                 {
