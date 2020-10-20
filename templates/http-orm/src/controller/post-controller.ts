@@ -1,0 +1,4 @@
+@JsonController()
+export class PostController {
+    
+}

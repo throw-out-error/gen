@@ -1,0 +1,10 @@
+{
+    "database": {
+        "type": "sqlite",
+        "url": "../db.sqlite",
+        "database": "ts-http-template"
+    },
+    "app": {
+        "name": "ts-http-template"
+    }
+}

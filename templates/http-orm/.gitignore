@@ -1,4 +1,5 @@
 # Distribution
+dist
 out
 build
 node_modules
@@ -9,8 +10,11 @@ logs
 
 # Environment
 *.env*
+config/production.json
 
 # Misc
 .DS_Store
-templates/*/dist
+*.sqlite
+
+# IDE Settings
 .vscode
