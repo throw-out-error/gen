@@ -1,5 +1,5 @@
 dependencies:
-  '@toes/core': github.com/throw-out-error/core/f72e1877e72be300303222e99143100d587a9bf8
+  '@toes/core': github.com/throw-out-error/core/78e857bb25c0c9892918b798efd3848797f6d1ea
   bunyan: 1.8.14
   class-transformer: 0.3.1
   class-validator: 0.12.2
@@ -16,11 +16,11 @@ dependencies:
   typeorm: 0.2.28
   typeorm-typedi-extensions: 0.2.3_typedi@0.8.0+typeorm@0.2.28
 devDependencies:
-  '@toes/gen': github.com/throw-out-error/gen/4c156ee70606dd0e09e4fbfa2d4ecff2a7c8de6b
+  '@toes/gen': github.com/throw-out-error/gen/273e92a481750bb3c11c04dd6fd3f1da0c3d6f33
   '@types/bunyan': 1.8.6
   '@types/config': 0.0.36
   '@types/express': 4.17.8
-  '@types/node': 14.14.3
+  '@types/node': 14.14.10
   '@types/passport': 1.0.4
   '@types/passport-jwt': 3.0.3
   '@typescript-eslint/eslint-plugin': 4.6.0_c49ab39d9ee883ad9feb3c9735ab5bed
@@ -151,6 +151,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Jus9s4CDbqwocc5pOAnh8ShfrnMcPHuJYzVcSUU7lrh8Ni5HuIqX3oilL86p3dlTrk0LzHRCgA/GQ7uNCw6l2Q==
+  /@types/node/14.14.10:
+    dev: true
+    resolution:
+      integrity: sha512-J32dgx2hw8vXrSbu4ZlVhn1Nm3GbeCFNw2FWL8S5QKucHGY0cyNwjdQdO+KMBZ4wpmC7KhLCiNsdk1RFRIYUQQ==
   /@types/node/14.14.3:
     dev: true
     resolution:
@@ -854,12 +858,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-mI3zP+qxke95mmE2nddsF635V+o=
-  /date-fns/2.16.1:
-    dev: false
-    engines:
-      node: '>=0.11'
-    resolution:
-      integrity: sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
   /dateformat/1.0.12:
     dependencies:
       get-stdin: 4.0.1
@@ -2725,12 +2723,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==
-  /rotating-file-stream/2.1.3:
-    dev: false
-    engines:
-      node: '>=10.0'
-    resolution:
-      integrity: sha512-zZ4Tkngxispo7DgiTqX0s4ChLtM3qET6iYsDA9tmgDEqJ3BFgRq/ZotsKEDAYQt9pAn9JwwqT27CSwQt3CTxNg==
   /routing-controllers/0.9.0-alpha.6_4ae0cf6eab4c30830de5e5acc43ca1c7:
     dependencies:
       class-transformer: 0.3.1
@@ -3503,17 +3495,13 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
-  github.com/throw-out-error/core/f72e1877e72be300303222e99143100d587a9bf8:
-    dependencies:
-      date-fns: 2.16.1
-      rotating-file-stream: 2.1.3
-      ts-log: 2.2.3
+  github.com/throw-out-error/core/78e857bb25c0c9892918b798efd3848797f6d1ea:
     dev: false
-    name: '@toes/core'
+    name: '@toes/core-monorepo'
     resolution:
-      tarball: 'https://codeload.github.com/throw-out-error/core/tar.gz/f72e1877e72be300303222e99143100d587a9bf8'
-    version: 0.0.3-dev
-  github.com/throw-out-error/gen/4c156ee70606dd0e09e4fbfa2d4ecff2a7c8de6b:
+      tarball: 'https://codeload.github.com/throw-out-error/core/tar.gz/78e857bb25c0c9892918b798efd3848797f6d1ea'
+    version: 0.0.1-dev
+  github.com/throw-out-error/gen/273e92a481750bb3c11c04dd6fd3f1da0c3d6f33:
     dependencies:
       chalk: 4.1.0
       commander: 6.2.0
@@ -3523,7 +3511,7 @@ packages:
     hasBin: true
     name: '@toes/gen'
     resolution:
-      tarball: 'https://codeload.github.com/throw-out-error/gen/tar.gz/4c156ee70606dd0e09e4fbfa2d4ecff2a7c8de6b'
+      tarball: 'https://codeload.github.com/throw-out-error/gen/tar.gz/273e92a481750bb3c11c04dd6fd3f1da0c3d6f33'
     version: 1.0.0
 specifiers:
   '@toes/core': 'github:throw-out-error/core'
@@ -3531,7 +3519,7 @@ specifiers:
   '@types/bunyan': 1.8.6
   '@types/config': 0.0.36
   '@types/express': 4.17.8
-  '@types/node': 14.14.3
+  '@types/node': 14.14.10
   '@types/passport': 1.0.4
   '@types/passport-jwt': 3.0.3
   '@typescript-eslint/eslint-plugin': 4.6.0
