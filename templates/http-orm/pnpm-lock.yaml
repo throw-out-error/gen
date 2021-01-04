@@ -16,7 +16,7 @@ dependencies:
   typeorm: 0.2.28
   typeorm-typedi-extensions: 0.2.3_typedi@0.8.0+typeorm@0.2.28
 devDependencies:
-  '@toes/gen': github.com/throw-out-error/gen/273e92a481750bb3c11c04dd6fd3f1da0c3d6f33
+  '@toes/gen': github.com/throw-out-error/gen/132178579c765b7baf7704f88963fedc052b7c21
   '@types/bunyan': 1.8.6
   '@types/config': 0.0.36
   '@types/express': 4.17.8
@@ -27,7 +27,7 @@ devDependencies:
   '@typescript-eslint/parser': 4.6.0_eslint@7.12.0+typescript@4.0.3
   eslint: 7.12.0
   eslint-config-prettier: 6.14.0_eslint@7.12.0
-  eslint-plugin-prettier: 3.1.4_eslint@7.12.0+prettier@2.1.2
+  eslint-plugin-prettier: 3.3.1_487e44b8233064c5483efc52c7a60cbb
   listr2: 3.2.2
   prettier: 2.1.2
   ts-node-dev: 1.0.0_typescript@4.0.3
@@ -1049,9 +1049,10 @@ packages:
       eslint: '>=3.14.1'
     resolution:
       integrity: sha512-DbVwh0qZhAC7CNDWcq8cBdK6FcVHiMTKmCypOPWeZkp9hJ8xYwTaWSa6bb6cjfi8KOeJy0e9a8Izxyx+O4+gCQ==
-  /eslint-plugin-prettier/3.1.4_eslint@7.12.0+prettier@2.1.2:
+  /eslint-plugin-prettier/3.3.1_487e44b8233064c5483efc52c7a60cbb:
     dependencies:
       eslint: 7.12.0
+      eslint-config-prettier: 6.14.0_eslint@7.12.0
       prettier: 2.1.2
       prettier-linter-helpers: 1.0.0
     dev: true
@@ -1059,9 +1060,13 @@ packages:
       node: '>=6.0.0'
     peerDependencies:
       eslint: '>=5.0.0'
+      eslint-config-prettier: '*'
       prettier: '>=1.13.0'
+    peerDependenciesMeta:
+      eslint-config-prettier:
+        optional: true
     resolution:
-      integrity: sha512-jZDa8z76klRqo+TdGDTFJSavwbnWK2ZpqGKNZ+VvweMW516pDUMmQ2koXvxEE4JhzNvTv+radye/bWGBmA6jmg==
+      integrity: sha512-Rq3jkcFY8RYeQLgk2cCwuc0P7SEFwDravPhsJZOQ5N4YI4DSg50NyqJ/9gdZHzQlHf8MvafSesbNJCcP/FF6pQ==
   /eslint-scope/5.1.1:
     dependencies:
       esrecurse: 4.3.0
@@ -3501,7 +3506,7 @@ packages:
     resolution:
       tarball: 'https://codeload.github.com/throw-out-error/core/tar.gz/78e857bb25c0c9892918b798efd3848797f6d1ea'
     version: 0.0.1-dev
-  github.com/throw-out-error/gen/273e92a481750bb3c11c04dd6fd3f1da0c3d6f33:
+  github.com/throw-out-error/gen/132178579c765b7baf7704f88963fedc052b7c21:
     dependencies:
       chalk: 4.1.0
       commander: 6.2.0
@@ -3511,7 +3516,7 @@ packages:
     hasBin: true
     name: '@toes/gen'
     resolution:
-      tarball: 'https://codeload.github.com/throw-out-error/gen/tar.gz/273e92a481750bb3c11c04dd6fd3f1da0c3d6f33'
+      tarball: 'https://codeload.github.com/throw-out-error/gen/tar.gz/132178579c765b7baf7704f88963fedc052b7c21'
     version: 1.0.0
 specifiers:
   '@toes/core': 'github:throw-out-error/core'
@@ -3530,7 +3535,7 @@ specifiers:
   config: ^3.3.2
   eslint: 7.12.0
   eslint-config-prettier: 6.14.0
-  eslint-plugin-prettier: 3.1.4
+  eslint-plugin-prettier: 3.3.1
   express: ^4.17.1
   listr2: 3.2.2
   passport: ^0.4.1
