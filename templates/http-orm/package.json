@@ -50,6 +50,6 @@
         "ts-log": "^2.2.3",
         "typedi": "^0.8.0",
         "typeorm": "^0.2.28",
-        "typeorm-typedi-extensions": "^0.2.3"
+        "typeorm-typedi-extensions": "^0.4.0"
     }
 }
