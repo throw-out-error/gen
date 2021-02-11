@@ -5,7 +5,7 @@ dependencies:
   listr2: 3.1.1_enquirer@2.3.6
 devDependencies:
   '@types/listr': 0.14.2
-  '@types/node': 14.14.10
+  '@types/node': 14.14.25
   '@typescript-eslint/eslint-plugin': 4.6.0_c49ab39d9ee883ad9feb3c9735ab5bed
   '@typescript-eslint/parser': 4.6.0_eslint@7.12.0+typescript@4.0.3
   eslint: 7.12.0
@@ -85,10 +85,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-wCipMbQr3t2UHTm90LldVp+oTBj1TX6zvpkCJcWS4o8nn6kS8SN93oUvKJAgueIRZ5M36yOlFmScqBxYH8Ajig==
-  /@types/node/14.14.10:
+  /@types/node/14.14.25:
     dev: true
     resolution:
-      integrity: sha512-J32dgx2hw8vXrSbu4ZlVhn1Nm3GbeCFNw2FWL8S5QKucHGY0cyNwjdQdO+KMBZ4wpmC7KhLCiNsdk1RFRIYUQQ==
+      integrity: sha512-EPpXLOVqDvisVxtlbvzfyqSsFeQxltFbluZNRndIb8tr9KiBnYNLzrc1N3pyKUCww2RNrfHDViqDWWE1LCJQtQ==
   /@types/node/14.14.3:
     dev: true
     resolution:
@@ -1311,7 +1311,7 @@ packages:
       integrity: sha512-/lg70HAjtkUgWPVZhZcm+T4hkL8Zbtp1nFNOn3lRrxnlv50SRBv7cR7RqR+GMsd3hUXy9hWBo4CHTbFTcOYwig==
 specifiers:
   '@types/listr': 0.14.2
-  '@types/node': 14.14.10
+  '@types/node': 14.14.25
   '@typescript-eslint/eslint-plugin': 4.6.0
   '@typescript-eslint/parser': 4.6.0
   chalk: ^4.1.0
