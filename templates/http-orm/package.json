@@ -32,7 +32,7 @@
         "listr2": "3.2.2",
         "prettier": "2.1.2",
         "ts-node-dev": "1.0.0",
-        "typescript": "4.0.3"
+        "typescript": "4.1.5"
     },
     "dependencies": {
         "@toes/core": "github:throw-out-error/core",
