@@ -16,13 +16,13 @@ dependencies:
   typeorm: 0.2.28
   typeorm-typedi-extensions: 0.2.3_typedi@0.8.0+typeorm@0.2.28
 devDependencies:
-  '@toes/gen': github.com/throw-out-error/gen/273e92a481750bb3c11c04dd6fd3f1da0c3d6f33
+  '@toes/gen': github.com/throw-out-error/gen/132178579c765b7baf7704f88963fedc052b7c21
   '@types/bunyan': 1.8.6
   '@types/config': 0.0.36
   '@types/express': 4.17.8
   '@types/node': 14.14.10
   '@types/passport': 1.0.4
-  '@types/passport-jwt': 3.0.3
+  '@types/passport-jwt': 3.0.4
   '@typescript-eslint/eslint-plugin': 4.6.0_c49ab39d9ee883ad9feb3c9735ab5bed
   '@typescript-eslint/parser': 4.6.0_eslint@7.12.0+typescript@4.0.3
   eslint: 7.12.0
@@ -143,7 +143,7 @@ packages:
       integrity: sha512-3c+yGKvVP5Y9TYBEibGNR+kLtijnj7mYrXRg+WpFb2X9xm04g/DXYkfg4hmzJQosc9snFNUPkbYIhu+KAm6jJw==
   /@types/jsonwebtoken/8.5.0:
     dependencies:
-      '@types/node': 14.14.3
+      '@types/node': 14.14.10
     dev: true
     resolution:
       integrity: sha512-9bVao7LvyorRGZCw0VmH/dr7Og+NdjYSsKAxB43OQoComFbBgsEpoR9JW6+qSq/ogwVBg8GI2MfAlk4SYI4OLg==
@@ -159,14 +159,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-33/L34xS7HVUx23e0wOT2V1qPF1IrHgQccdJVm9uXGTB9vFBrrzBtkQymT8VskeKOxjz55MSqMv0xuLq+u98WQ==
-  /@types/passport-jwt/3.0.3:
+  /@types/passport-jwt/3.0.4:
     dependencies:
       '@types/express': 4.17.8
       '@types/jsonwebtoken': 8.5.0
       '@types/passport-strategy': 0.2.35
     dev: true
     resolution:
-      integrity: sha512-RlOCXiTitE8kazj9jZc6/BfGCSqnv2w/eYPDm3+3iNsquHn7ratu7oIUskZx9ZtnwMdpvdpy+Z/QYClocH5NvQ==
+      integrity: sha512-GDtQaG9Wg+9lUk6MTbYI1yMr3TonFlDO0QpQp2EA4Di+VnNvz5fHJ4P763bgaGmtqQATYHg/8iDL7oqJ7Ed9AA==
   /@types/passport-strategy/0.2.35:
     dependencies:
       '@types/express': 4.17.8
@@ -1793,7 +1793,7 @@ packages:
   /koa-multer/1.0.2:
     dependencies:
       multer: 1.3.0
-    deprecated: 'Please use @koa/multer instead, see <https://github.com/koajs/multer>'
+    deprecated: Please use @koa/multer instead, see <https://github.com/koajs/multer>
     dev: false
     engines:
       node: '>= 4'
@@ -3499,9 +3499,9 @@ packages:
     dev: false
     name: '@toes/core-monorepo'
     resolution:
-      tarball: 'https://codeload.github.com/throw-out-error/core/tar.gz/78e857bb25c0c9892918b798efd3848797f6d1ea'
+      tarball: https://codeload.github.com/throw-out-error/core/tar.gz/78e857bb25c0c9892918b798efd3848797f6d1ea
     version: 0.0.1-dev
-  github.com/throw-out-error/gen/273e92a481750bb3c11c04dd6fd3f1da0c3d6f33:
+  github.com/throw-out-error/gen/132178579c765b7baf7704f88963fedc052b7c21:
     dependencies:
       chalk: 4.1.0
       commander: 6.2.0
@@ -3511,17 +3511,17 @@ packages:
     hasBin: true
     name: '@toes/gen'
     resolution:
-      tarball: 'https://codeload.github.com/throw-out-error/gen/tar.gz/273e92a481750bb3c11c04dd6fd3f1da0c3d6f33'
+      tarball: https://codeload.github.com/throw-out-error/gen/tar.gz/132178579c765b7baf7704f88963fedc052b7c21
     version: 1.0.0
 specifiers:
-  '@toes/core': 'github:throw-out-error/core'
-  '@toes/gen': 'github:throw-out-error/gen'
+  '@toes/core': github:throw-out-error/core
+  '@toes/gen': github:throw-out-error/gen
   '@types/bunyan': 1.8.6
   '@types/config': 0.0.36
   '@types/express': 4.17.8
   '@types/node': 14.14.10
   '@types/passport': 1.0.4
-  '@types/passport-jwt': 3.0.3
+  '@types/passport-jwt': 3.0.4
   '@typescript-eslint/eslint-plugin': 4.6.0
   '@typescript-eslint/parser': 4.6.0
   bunyan: ^1.8.14
